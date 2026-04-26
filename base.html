@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FinanZen</title>
+</head>
+<body>
+    <header>
+        <h1>FinanZen - Tienda Virtual</h1>
+        <nav>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'clientes' %}">Clientes</a>
+            <a href="{% url 'productos' %}">Productos</a>
+            <a href="{% url 'compras' %}">Compras</a>
+        </nav>
+        <hr>
+    </header>
+
+    {% block contenido %}
+    {% endblock %}
+</body>
+</html>

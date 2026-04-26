@@ -1,0 +1,16 @@
+{% extends 'tienda/base.html' %}
+
+{% block contenido %}
+<h2>Resultados de búsqueda</h2>
+<p>Categoría buscada: {{ categoria }}</p>
+
+{% if productos %}
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.nombre }} - {{ producto.categoria }} - ${{ producto.precio }} - Stock: {{ producto.stock }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No se encontraron productos para esa categoría.</p>
+{% endif %}
+{% endblock %}

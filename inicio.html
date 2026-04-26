@@ -1,0 +1,16 @@
+{% extends 'tienda/base.html' %}
+
+{% block contenido %}
+<h2>Inicio</h2>
+<p>Bienvenido a FinanZen.</p>
+
+<h3>Buscar productos por categoría</h3>
+<form action="{% url 'buscar_producto' %}" method="GET">
+    {{ formulario.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+
+{% if mensaje %}
+<p>{{ mensaje }}</p>
+{% endif %}
+{% endblock %}

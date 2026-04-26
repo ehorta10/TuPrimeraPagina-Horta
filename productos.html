@@ -1,0 +1,15 @@
+{% extends 'tienda/base.html' %}
+
+{% block contenido %}
+<h2>Formulario - Agregar Producto</h2>
+
+<form action="{% url 'productos' %}" method="POST">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <button type="submit">Enviar</button>
+</form>
+
+{% if mensaje %}
+<p>{{ mensaje }}</p>
+{% endif %}
+{% endblock %}
